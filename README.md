@@ -1,7 +1,16 @@
 # SUTRA API Samples Repository
 
-A resource designed to provide straightforward examples on how to implement API testing in both Python and TypeScript.
-This repository is aimed at developers, QA engineers, and anyone interested in using our models.
+SUTRA is a series of ultrafast, multilingual, online Generative AI models. It supports over 50 languages with conversation, search, and visual capabilities.
+
+This repository is a resource designed to provide straightforward examples on how to implement API testing in both Python and TypeScript,
+aimed at developers, QA engineers, and anyone interested in using our models.
+
+## SUTRA models comes in multiple flavors.
+
+- **SUTRA-LIGHT**: Designed for conversation, summarization, and other tasks in 50+ languages. Highly efficient and optimized for ultra-low latency applications.
+- **SUTRA-PRO**: Our best performant model adept at executing instructions in 50+ languages for conversational use cases and complex tasks.
+- **SUTRA-ONLINE**: An internet-connected model that can use knowledge from the internet to provide up-to-date and factual responses.
+
 
 ## Repository Structure
 
@@ -26,7 +35,7 @@ For obtaining an API key contact: `support@two.ai`. The documentation can be acc
 - Python (for running Python samples)
 - Node.js and npm/yarn (for running TypeScript samples)
 
-## How to Use This Repository
+### How to Use This Repository
 
 1. **Clone the Repository:**
    ```bash
@@ -54,10 +63,10 @@ For obtaining an API key contact: `support@two.ai`. The documentation can be acc
 
 | endpoint url                                    | model        |
 |-------------------------------------------------|--------------|
-| `https://api.two.ai/v1/sutra-light/completion`  | sutra-light  |
-| `https://api.two.ai/v1/sutra-pro/completion`    | sutra-pro    |
-| `https://api.two.ai/v1/sutra-turbo/completion`  | sutra-turbo  |
-| `https://api.two.ai/v1/sutra-online/completion` | sutra-online |
+| `https://api.two.ai/v1/sutra-light/completion`  | SUTRA-LIGHT  |
+| `https://api.two.ai/v1/sutra-pro/completion`    | SUTRA-PRO    |
+| `https://api.two.ai/v1/sutra-online/completion` | SUTRA-ONLINE |
+
 
 ## Contributions and Feedback
 
