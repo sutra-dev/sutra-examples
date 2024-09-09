@@ -1,29 +1,12 @@
-# sutra-light, sutra-pro, sutra-turbo
-curl -X POST "https://api.two.ai/v1/sutra-light/completion" \
-  -H "Authorization: $SUTRA_API_KEY" \
+# sutra-light, sutra-pro
+
+curl -X POST "https://api.two.ai/v2/chat/completions" \
+  -H "authorization: Bearer $SUTRA_API_KEY" \
   -H "Content-Type: application/json" \
-  -H "Accept application/x-ndjson" \
+  -H "Accept text/event-stream" \
   -d '{
   "model": "sutra-light",
   "messages": [
-    {"role": "user", "content": "How many boroughs in New York City?"}
+    {"role": "user", "content": "मुझे मंगल ग्रह के बारे में 5 पैराग्राफ दीजिए"}
   ]
-}'
-
-# sutra-online
-curl -X POST "https://api.two.ai/v1/sutra-online/completion" \
-  -H "Authorization: $SUTRA_API_KEY" \
-  -H "Content-Type: application/json" \
-  -H "Accept application/x-ndjson" \
-  -d '{
-  "userInput": "How many boroughs in New York City?",
-  "style": {
-    "tone": "funny",
-    "format": "medium"
-  },
-  "searchLocation": {
-    "uule": "w+CAIQICIMTXVtYmFpLEluZGlh",
-    "countryCode": "IN",
-    "languageCode": "hi"
-  }
 }'

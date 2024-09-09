@@ -9,7 +9,6 @@ aimed at developers, QA engineers, and anyone interested in using our models.
 
 - **SUTRA-LIGHT**: Designed for conversation, summarization, and other tasks in 50+ languages. Highly efficient and optimized for ultra-low latency applications.
 - **SUTRA-PRO**: Our best performant model adept at executing instructions in 50+ languages for conversational use cases and complex tasks.
-- **SUTRA-ONLINE**: An internet-connected model that can use knowledge from the internet to provide up-to-date and factual responses.
 
 
 ## Repository Structure
@@ -61,11 +60,10 @@ For obtaining an API key contact: `support@two.ai`. The documentation can be acc
 
 4. List of available endpoints and models: 
 
-| endpoint url                                    | model        |
-|-------------------------------------------------|--------------|
-| `https://api.two.ai/v1/sutra-light/completion`  | SUTRA-LIGHT  |
-| `https://api.two.ai/v1/sutra-pro/completion`    | SUTRA-PRO    |
-| `https://api.two.ai/v1/sutra-online/completion` | SUTRA-ONLINE |
+| endpoint url                             | model       |
+|------------------------------------------|-------------|
+| `https://api.two.ai/v2/chat/completions` | SUTRA-LIGHT |
+| `https://api.two.ai/v2/chat/completions` | SUTRA-PRO   |
 
 
 ## Contributions and Feedback

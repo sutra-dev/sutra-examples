@@ -18,33 +18,37 @@ Compile and run a TypeScript sample:
 
 Which contains the following sample:
   ```typescript
-  import axios, { AxiosRequestConfig } from 'axios';
+  import { OpenAI } from 'openai';
 
-  async function main() {
-      const cfg: AxiosRequestConfig = {
-              headers: {
-                  Authorization: process.env.SUTRA_API_KEY,
-                  'Content-Type': 'application/json',
-                  Accept: 'application/x-ndjson',
-              },
-              responseType: 'stream',
-          };
+  async function testSutra() {
 
-      const url = 'https://api.two.ai/v1/sutra-light/completion';
+      const url = 'https://api.two.ai/v2';
 
-      const body = {
-          model: 'sutra-light',
-          messages: [ { role: 'user', content: 'How many boroughs in New York City?' } ]
-      }
+      const client = new OpenAI({
+          apiKey: process.env.SUTRA_API_KEY,
+          baseURL: url,
+      })
 
-      const reply = await axios.post(url, body, cfg);
-      const stream = reply.data;
+      const stream = await client.beta.chat.completions.stream(
+          {
+              model: 'sutra-light',
+              messages: [ { role: 'user', content: 'मुझे मंगल ग्रह के बारे में 5 पैराग्राफ दीजिए' } ],
+          }
+      ); 
 
       for await (const chunk of stream) {
-          console.log(chunk.toString());
+          if (chunk.choices.length > 0) {
+              const content = chunk.choices[0].delta?.content;
+              const finishReason = chunk.choices[0].finish_reason;
+              if (content && finishReason === null) {
+                  process.stdout.write(content);
+              }
+          }
       }
   }
 
-  (async () => await main())();
+  (async (): Promise<void> => {
+      await testSutra();
+      process.exit(0);
+  })();
   ```
-

@@ -18,25 +18,24 @@ To run a sample Python script:
   
 Which contains the following sample:
   ```python
-  import requests
   import os
+  from openai import OpenAI
 
-  url = "https://api.two.ai/v1/sutra-light/completion"
+  url = 'https://api.two.ai/v2';
 
-  payload = {
-      "model": "sutra-light",
-      "messages": [
-          {"role": "user", "content": "How many boroughs in New York City?"}
-      ]
-  }
-  headers = {
-      "Authorization": os.environ.get("SUTRA_API_KEY"),
-      "Content-Type": "application/json",
-      "Accept": "application/x-ndjson"
-  }
+  client = OpenAI(base_url=url,
+                  api_key=os.environ.get("SUTRA_API_KEY"))
 
-  response = requests.request("POST", url, json=payload, headers=headers)
+  stream = client.chat.completions.create(model='sutra-light',
+                                          messages = [{"role": "user", "content": "मुझे मंगल ग्रह के बारे में 5 पैराग्राफ दीजिए"}],
+                                          max_tokens=1024,
+                                          temperature=0,
+                                          stream=True)
 
-  print(response.text)
+  for chunk in stream:
+      if len(chunk.choices) > 0:
+          content = chunk.choices[0].delta.content
+          finish_reason = chunk.choices[0].finish_reason
+          if content and finish_reason is None:
+              print(content, end='', flush=True)
   ```
-  
