@@ -6,7 +6,7 @@ This repository is a resource designed to provide straightforward examples on ho
 aimed at developers, QA engineers, and anyone interested in using our models.
 
 ## SUTRA models comes in multiple flavors.
-- **SUTRA-V2 **: Designed for conversation, summarization, and other tasks in 50+ languages. Highly efficient and optimized for ultra-low latency applications.
+- **SUTRA-V2**: Designed for conversation, summarization, and other tasks in 50+ languages. Highly efficient and optimized for ultra-low latency applications.
 
 ## Repository Structure
 
