@@ -57,11 +57,11 @@ For obtaining an API key contact: `support@two.ai`. The documentation can be acc
 
 4. List of available endpoints and models: 
 
-| endpoint url                             | model       |
-|------------------------------------------|-------------|
-| `https://api.two.ai/v2/chat/completions` | SUTRA-V2	 |
-| `https://api.two.ai/v2/chat/completions` | SUTRA-LIGHT | # now deprecated
-| `https://api.two.ai/v2/chat/completions` | SUTRA-PRO   | # now deprecated
+| endpoint url                             | model			  |
+|------------------------------------------|------------------------------|
+| `https://api.two.ai/v2/chat/completions` | SUTRA-V2			  |
+| `https://api.two.ai/v2/chat/completions` | SUTRA-LIGHT (now deprecated) | # now deprecated
+| `https://api.two.ai/v2/chat/completions` | SUTRA-PRO   (now deprecated) | # now deprecated
 
 
 ## Contributions and Feedback
