@@ -1,5 +1,5 @@
 // ---
-// sutra-light, sutra-pro
+// sutra-v2
 
 import { OpenAI } from 'openai';
 
@@ -14,7 +14,7 @@ async function testSutra() {
 
     const stream = await client.beta.chat.completions.stream(
         {
-            model: 'sutra-light',
+            model: 'sutra-v2',
             messages: [ { role: 'user', content: 'मुझे मंगल ग्रह के बारे में 5 पैराग्राफ दीजिए' } ],
         }
     ); 

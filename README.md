@@ -6,10 +6,7 @@ This repository is a resource designed to provide straightforward examples on ho
 aimed at developers, QA engineers, and anyone interested in using our models.
 
 ## SUTRA models comes in multiple flavors.
-
-- **SUTRA-LIGHT**: Designed for conversation, summarization, and other tasks in 50+ languages. Highly efficient and optimized for ultra-low latency applications.
-- **SUTRA-PRO**: Our best performant model adept at executing instructions in 50+ languages for conversational use cases and complex tasks.
-
+- **SUTRA-V2 **: Designed for conversation, summarization, and other tasks in 50+ languages. Highly efficient and optimized for ultra-low latency applications.
 
 ## Repository Structure
 
@@ -62,8 +59,9 @@ For obtaining an API key contact: `support@two.ai`. The documentation can be acc
 
 | endpoint url                             | model       |
 |------------------------------------------|-------------|
-| `https://api.two.ai/v2/chat/completions` | SUTRA-LIGHT |
-| `https://api.two.ai/v2/chat/completions` | SUTRA-PRO   |
+| `https://api.two.ai/v2/chat/completions` | SUTRA-V2	 |
+| `https://api.two.ai/v2/chat/completions` | SUTRA-LIGHT | # now deprecated
+| `https://api.two.ai/v2/chat/completions` | SUTRA-PRO   | # now deprecated
 
 
 ## Contributions and Feedback
